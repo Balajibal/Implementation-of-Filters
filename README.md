@@ -1,4 +1,9 @@
-# Implementation-of-Filters
+### Ex.No:06
+### DATE: 
+# <p align="center"> Implementation-of-Filters
+
+</p>
+
 ## Aim:
 To implement filters for smoothing and sharpening the images in the spatial domain.
 
@@ -7,58 +12,21 @@ Anaconda - Python 3.7
 
 ## Algorithm:
 ### Step1
-Import the necessary modules
-
-
+Import the necessary modules.
 ### Step2
-For performing smoothing operation on a image.
-
-Average filter:
-```python
-
-avg_kernel=np.ones((13,13),np.float32)/169
-average_filter_image=cv2.filter2D(image,-1,avg_kernel)
-```
-Weighted average filter :
-```python
-wt_avg_kernel=np.array([[1,2,1],[2,4,2],[1,2,1]])/16
-wt_average_filter_image=cv2.filter2D(image,-1,wt_avg_kernel)
-```
-Gaussian Blur:
-```python
-gaussian_blur=cv2.GaussianBlur(image,(31,31),0,0)
-```
-Median filter:
-```python
-median_blur=cv2.medianBlur(image,11)
-```
-
+For performing smoothing operation on a image use average filter,weighted average filter,gaussian blur,median blur.
 
 ### Step3
-For performing sharpening on a image.
-
-Laplacian Kernel:
-```python
-lap_kernel=np.array([[-1,-1,-1],[-1,8,-1],[-1,-1,-1]])
-lap_image=cv2.filter2D(image,-1,lap_kernel)
-```
-Laplacian Operator:
-```python
-Lap_sharp=cv2.Laplacian(image,cv2.CV_64F)
-```
-
-
-
+For performing sharpening on a image use laplacian kernel and laplacian operator.
 
 ### Step4
 Display all the images with their respective filters.
 
 
-
 ## Program:
-### Developed By   : BALAJI N
-### Register Number: 212220230006
-
+### Developed By   : Balaji N
+### Register Number:212220230006
+</br>
 
 ### 1. Smoothing Filters
 
@@ -76,10 +44,6 @@ plt.axis("off")
 plt.title('Average Filter image')
 plt.imshow(average_filter_image)
 plt.show()
-
-
-
-
 
 
 
@@ -102,11 +66,6 @@ plt.show()
 
 
 
-
-
-
-
-
 ```
 iii) Using Gaussian Filter
 ```Python
@@ -122,11 +81,6 @@ plt.axis("off")
 plt.title('Gaussian Filter image')
 plt.imshow(gaussian_blur)
 plt.show()
-
-
-
-
-
 
 
 
@@ -149,14 +103,12 @@ plt.show()
 
 
 
-
-
-
 ```
 
 ### 2. Sharpening Filters
 i) Using Laplacian Kernal
 ```Python
+
 laplacian_kernel=np.array([[-1,-1,-1],[-1,8,-1],[-1,-1,-1]])
 laplacian_image=cv2.filter2D(image,-1,laplacian_kernel)
 plt.figure(figsize=(10,10))
@@ -169,8 +121,6 @@ plt.axis("off")
 plt.title('Laplacian Kernel Filter image')
 plt.imshow(laplacian_image)
 plt.show()
-
-
 
 
 
@@ -192,49 +142,31 @@ plt.show()
 
 
 
-
-
-
-
-
-
-
-
-
-
 ```
 
 ## OUTPUT:
 ### 1. Smoothing Filters
-</br>
+
 
 i) Using Averaging Filter
-![Screenshot (123)](https://user-images.githubusercontent.com/75234946/166441265-3975e4f3-3e88-4fb0-b646-84ce14e24a41.png)
+![Screenshot (88)](https://user-images.githubusercontent.com/75235334/166420627-31b2f484-5a06-488a-916d-a9829b2e6e64.png)
 
 
 ii) Using Weighted Averaging Filter
-![Screenshot (125)](https://user-images.githubusercontent.com/75234946/166441409-20df41e8-1d9a-47d4-b2b4-0076b490aa3b.png)
+![Screenshot (89)](https://user-images.githubusercontent.com/75235334/166420731-9e61152f-f8ae-4264-84ee-00b5fc102a07.png)
 
+iii) Using Gaussian Filter
 
-iii) Using Weighted Averaging Filter
-![Screenshot (127)](https://user-images.githubusercontent.com/75234946/166441527-e779f65f-7fc3-46d5-a4ad-72bc119fb3a8.png)
-
-
+![Screenshot (90)](https://user-images.githubusercontent.com/75235334/166420809-96ee3135-cf27-439c-bc61-1f70323e9104.png)
 iv) Using Median Filter
-![image](https://user-images.githubusercontent.com/75234946/166441626-e3c6c766-876b-41be-a107-cc9ed78aef2f.png)
-
-
+![Screenshot (91)](https://user-images.githubusercontent.com/75235334/166420887-77f63e8a-07c4-4ea3-af1c-0d2a7dfb2d11.png)
 ### 2. Sharpening Filters
-
-
+ 
 
 i) Using Laplacian Kernal
-![image](https://user-images.githubusercontent.com/75234946/166441817-f942e1fd-b0a5-4bab-9e38-5c73692d760f.png)
-
-
+![Screenshot (92)](https://user-images.githubusercontent.com/75235334/166420999-c01a439c-f41f-43aa-87d1-876f4c2c9c5e.png)
 ii) Using Laplacian Operator
-![image](https://user-images.githubusercontent.com/75234946/166441917-56f3e4b3-a09c-409e-b872-600f5e3535e5.png)
-
+![Screenshot (93)](https://user-images.githubusercontent.com/75235334/166421063-230efd8a-1792-4488-be88-d05563a44d44.png)
 
 ## Result:
 Thus the filters are designed for smoothing and sharpening the images in the spatial domain.
